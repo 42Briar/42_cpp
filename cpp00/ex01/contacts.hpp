@@ -17,6 +17,9 @@ public:
 	std::string secret;
 	bool store;
 
+	void storeinfo( void );
+	void display( int index );
+	void dispfull( void );
 
 };
 
