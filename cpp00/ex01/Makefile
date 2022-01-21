@@ -5,10 +5,10 @@ SRC 	= phonebook.cpp phonebookmain.cpp contacts.cpp
 all: $(NAME)
 
 $(NAME): 
-	$(CC) $(FLAGS) $(SRC) -o $(NAME)
+	@$(CC) $(FLAGS) $(SRC) -o $(NAME)
 
 clean:
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: clean all
 
