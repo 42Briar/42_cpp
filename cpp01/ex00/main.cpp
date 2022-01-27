@@ -7,5 +7,6 @@ int main(void)
 	std::cout << "-----------------------" << std::endl;
 	std::cout << "Heap allocated zombie:" << std::endl;
 	Zombie *zombie = newZombie("dave2");
+	zombie->announce();
 	delete zombie;
 }
