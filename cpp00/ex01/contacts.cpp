@@ -7,7 +7,7 @@ Contacts::Contacts ( void )
 	this->store = false;
 }
 
-Contacts::~Contacts (void)
+Contacts::~Contacts ( void )
 {
 
 }
@@ -16,15 +16,15 @@ void Contacts::storeinfo ( void )
 {
 	this->store = true;
 	std::cout << "Enter first name: ";
-	std::getline (std::cin, this->first_name);
+	std::cin >> this->first_name;
 	std::cout << "Enter last name: ";
-	std::getline (std::cin, this->last_name);
+	std::cin >> this->last_name;
 	std::cout << "Enter nickname: ";
-	std::getline (std::cin, this->nickname);
+	std::cin >> this->nickname;
 	std::cout << "Enter phone number: ";
-	std::getline (std::cin, this->phone_number);
+	std::cin >> this->phone_number;
 	std::cout << "Enter darkest secret: ";
-	std::getline (std::cin, this->secret);
+	std::cin >> this->secret;
 	std::cout << "Contact added!" << std::endl;
 }
 

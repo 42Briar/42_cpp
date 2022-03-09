@@ -9,8 +9,12 @@ $(NAME):
 	$(CC) $(FLAGS) $(SRC) -o $(NAME)
 
 clean:
-	rm -f $(NAME)
+
+fclean:
+	@rm -f $(NAME)
+	clean 
 
 re: clean all
 
-.PHONE: clean, re
+.PHONY: clean, re, fclean
+

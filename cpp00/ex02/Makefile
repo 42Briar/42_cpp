@@ -2,14 +2,24 @@ NAME 	= logs
 CC 		= c++
 FLAGS 	= -Wall -Wextra -Werror -std=c++98
 SRC 	= Account.cpp tests.cpp
+
+OBJS	= ${SRC:.cpp=.o}
+
 all: $(NAME)
 
-$(NAME): 
-	@$(CC) $(FLAGS) $(SRC) -o $(NAME)
+%.o: %.cpp
+	@$(CC) $(CFLAGS) -o $@ -c $<
+
+$(NAME): $(OBJS)
+	@$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 
 clean:
+	@rm -f $(OBJS)
+
+fclean:
 	@rm -f $(NAME)
+	clean 
 
 re: clean all
 
-.PHONE: clean, re
+.PHONY: clean, re, fclean

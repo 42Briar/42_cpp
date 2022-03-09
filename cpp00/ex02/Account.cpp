@@ -107,7 +107,7 @@ int		Account::getNbDeposits(void)
 {
 	return Account::_totalNbDeposits;
 }
-int		Account::getNbWithdrawals(void)
+int 	Account::getNbWithdrawals(void)
 {
 	return Account::_totalNbWithdrawals;
 }
