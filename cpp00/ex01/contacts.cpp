@@ -16,15 +16,15 @@ void Contacts::storeinfo ( void )
 {
 	this->store = true;
 	std::cout << "Enter first name: ";
-	std::cin >> this->first_name;
+	std::getline(std::cin, first_name);
 	std::cout << "Enter last name: ";
-	std::cin >> this->last_name;
+	std::getline(std::cin, last_name);
 	std::cout << "Enter nickname: ";
-	std::cin >> this->nickname;
+	std::getline(std::cin, nickname);
 	std::cout << "Enter phone number: ";
-	std::cin >> this->phone_number;
+	std::getline(std::cin, phone_number);
 	std::cout << "Enter darkest secret: ";
-	std::cin >> this->secret;
+	std::getline(std::cin, secret);
 	std::cout << "Contact added!" << std::endl;
 }
 
