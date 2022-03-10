@@ -1,18 +1,18 @@
-#include "contacts.hpp"
+#include "Contacts.hpp"
 #include <iostream>
 #include <iomanip>
 
-Contacts::Contacts ( void )
+Contacts::Contacts( void )
 {
 	this->store = false;
 }
 
-Contacts::~Contacts ( void )
+Contacts::~Contacts( void )
 {
 
 }
 
-void Contacts::storeinfo ( void )
+void Contacts::storeinfo( void )
 {
 	this->store = true;
 	std::cout << "Enter first name: ";
@@ -28,7 +28,7 @@ void Contacts::storeinfo ( void )
 	std::cout << "Contact added!" << std::endl;
 }
 
-void Contacts::display ( int index )
+void Contacts::display( int index )
 {
 	if (!this->store)
 		return;
@@ -47,7 +47,7 @@ void Contacts::display ( int index )
 		std::cout << std::setw(10) << std::right << this->nickname.substr(0, 10) << "|" << std::endl;
 }
 
-void Contacts::dispfull ( void )
+void Contacts::dispfull( void )
 {
 	if (!this->store)
 	{
@@ -59,4 +59,9 @@ void Contacts::dispfull ( void )
 	std::cout << "Nickname: " << this->nickname << std::endl;
 	std::cout << "Phone number: " << this->phone_number << std::endl;
 	std::cout << "Secret: " << this->secret << std::endl;
+}
+
+bool Contacts::checkstore( void )
+{
+	return store;
 }

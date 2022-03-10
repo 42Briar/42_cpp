@@ -1,4 +1,4 @@
-#include "phonebook.hpp"
+#include "Phonebook.hpp"
 #include <string>
 #include <iostream>
 #include <cctype>
@@ -17,7 +17,7 @@ void Phonebook::add ( void )
 {
 	for (int i = 0; i < 8; i++)
 	{
-		if (!Phonebook::entries[i].store)
+		if (!Phonebook::entries[i].checkstore())
 		{
 			Phonebook::entries[i].storeinfo();
 			return;
@@ -33,7 +33,7 @@ void Phonebook::search ( void )
 {
 	std::string response;
 
-	if (Phonebook::entries[0].store == false)
+	if (Phonebook::entries[0].checkstore() == false)
 	{
 		std::cout << "No contacts saved yet. Type 'ADD' to enter a contact" << std::endl;
 		return ;
