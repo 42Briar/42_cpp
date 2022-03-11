@@ -2,14 +2,27 @@ NAME 	= zombiehorde
 CC 		= c++
 FLAGS 	= -Wall -Wextra -Werror -std=c++98
 SRC 	= main.cpp Zombie.cpp ZombieHorde.cpp
-all: $(NAME)
+OBJDIR  = obj
+OBJ     = $(addprefix $(OBJDIR)/, ${SRC:.cpp=.o})
 
-$(NAME): 
-	@$(CC) $(FLAGS) $(SRC) -o $(NAME)
+all: $(OBJDIR) $(NAME)
+
+$(OBJDIR):
+	mkdir $(OBJDIR)
+
+$(OBJDIR)/%.o: %.cpp
+	$(CC) $(FLAGS) -c $< -o $@
+
+$(NAME): $(OBJ)
+	$(CC) $(FLAGS) -o $@ $^ 
 
 clean:
+	@rm -f $(NAME) $(wildcard *.o)
+	@rm -rf $(OBJDIR) 
+
+fclean: clean
 	@rm -f $(NAME)
 
-re: clean all
+re: fclean all
 
-.PHONE: clean, re
+.PHONY: all, clean, re, fclean

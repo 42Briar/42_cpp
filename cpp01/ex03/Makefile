@@ -1,7 +1,7 @@
-NAME 	= zombies
+NAME 	= Weapons
 CC 		= c++
 FLAGS 	= -Wall -Wextra -Werror -std=c++98
-SRC 	= main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
+SRC 	= main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 OBJDIR  = obj
 OBJ     = $(addprefix $(OBJDIR)/, ${SRC:.cpp=.o})
 
