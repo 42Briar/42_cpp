@@ -12,7 +12,7 @@ public:
 	~HumanB( void );
 
 	void attack( void );
-	void setWeapon( Weapon& newweapon );
+	void setWeapon( Weapon &newweapon );
 
 private:
 	std::string name;
