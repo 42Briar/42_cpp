@@ -1,7 +1,7 @@
 NAME 	= ex05
 CC 		= c++
 FLAGS 	= -Wall -Wextra -Werror -std=c++98
-SRC 	= main.cpp Karen.cpp
+SRC 	= main.cpp Harl.cpp
 OBJDIR  = obj
 OBJ     = $(addprefix $(OBJDIR)/, ${SRC:.cpp=.o})
 

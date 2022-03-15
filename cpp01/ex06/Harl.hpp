@@ -1,5 +1,5 @@
-#ifndef KAREN_HPP_
-# define KAREN_HPP_
+#ifndef Harl_HPP_
+# define Harl_HPP_
 
 # define DEBUG "I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup burger. I really do!"
 # define INFO "I cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!"
@@ -8,11 +8,11 @@
 
 #include <string>
 
-class Karen {
+class Harl {
 
 public:
-	Karen( void );
-	~Karen( void );
+	Harl( void );
+	~Harl( void );
 
 	void complain( std::string level );
 

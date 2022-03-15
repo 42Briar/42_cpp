@@ -1,28 +1,28 @@
-#include "Karen.hpp"
+#include "Harl.hpp"
 #include <iostream>
 #include <string>
 
-Karen::Karen(void) 
+Harl::Harl(void) 
 {
     
 }
 
-Karen::~Karen(void) 
+Harl::~Harl(void) 
 {
     
 }
 
-void Karen::complain(std::string level) 
+void Harl::complain(std::string level) 
 {
 	struct table { 
 		std::string name; 
-		void(Karen::*func)( void );
+		void(Harl::*func)( void );
 	};
 	table lookup[] = {
-		{"debug", &Karen::debug},
-		{"info", &Karen::info},
-		{"warning", &Karen::warning},
-		{"error", &Karen::error},
+		{"debug", &Harl::debug},
+		{"info", &Harl::info},
+		{"warning", &Harl::warning},
+		{"error", &Harl::error},
 	};
 
 	for (int i = 0; i < 4; i++)
@@ -35,22 +35,22 @@ void Karen::complain(std::string level)
 	}
 }
 
-void Karen::debug(void) 
+void Harl::debug(void) 
 {
     std::cout << DEBUG << std::endl;
 }
 
-void Karen::info(void) 
+void Harl::info(void) 
 {
     std::cout << INFO << std::endl;
 }
 
-void Karen::warning(void) 
+void Harl::warning(void) 
 {
     std::cout << WARNING << std::endl;
 }
 
-void Karen::error(void) 
+void Harl::error(void) 
 {
     std::cout << ERROR << std::endl;
 }

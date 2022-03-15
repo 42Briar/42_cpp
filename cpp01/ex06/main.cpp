@@ -1,4 +1,4 @@
-#include "Karen.hpp"
+#include "Harl.hpp"
 #include <iostream>
 
 int errorout( const std::string errmsg )
@@ -12,7 +12,7 @@ int main(int ac, char *av[])
 	if (ac != 2)
 		return errorout("Wrong number of arguments");
 
-	Karen test;
+	Harl test;
 	std::string level = av[1];
 
 	if (level != "DEBUG" && level != "WARNING" && level != "INFO" && level != "ERROR")
