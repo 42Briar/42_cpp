@@ -32,6 +32,20 @@ int main(int ac, char *av[])
 	{
 		if (replace == s1)
 			new_file << s2 << std::endl;
+		else if (replace.find(s1, 0) != std::string::npos)
+		{
+			for (int i = 0; i < (int)replace.length(); i++)
+			{
+				if (replace.compare(i, s1.length(), s1) == 0)
+				{
+					new_file << s2;
+					i += s1.length() - 1;
+					continue;
+				}
+				new_file << replace[i];
+			}
+			new_file << std::endl;
+		}
 		else 
 			new_file << replace << std::endl;
 	}
