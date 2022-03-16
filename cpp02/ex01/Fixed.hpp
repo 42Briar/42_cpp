@@ -16,12 +16,15 @@ public:
 
 	int getRawBits( void ) const;
 	void setRawBits( int const raw );
+	void printmsgfalse( void );
+	void printmsgtrue( void );
 	float toFloat( void ) const;
 	int toInt( void ) const;
 
 private:
 	int fpnumval;
 	static const int fracbits = 8;
+	bool printmsg;
 
 };
 

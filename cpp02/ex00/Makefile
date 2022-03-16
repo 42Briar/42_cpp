@@ -1,7 +1,7 @@
 NAME 	= ex00
 CC 		= c++
 FLAGS 	= -Wall -Wextra -Werror -std=c++98
-SRC 	= main.cpp Fixed.cpp
+SRC 	= $(shell find *cpp)
 OBJDIR  = obj
 OBJ     = $(addprefix $(OBJDIR)/, ${SRC:.cpp=.o})
 
