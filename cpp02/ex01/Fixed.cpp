@@ -4,7 +4,7 @@
 
 Fixed::Fixed(void)
 {
-	printmsg = true;
+	printmsg = false;
 	if (printmsg)
 		std::cout << "Default constructor" << std::endl;
     fpnumval = 0;
@@ -35,7 +35,8 @@ Fixed::Fixed(const Fixed &newfixed)
 
 Fixed::~Fixed(void) 
 {
-	std::cout << "Deconstructor" << std::endl;   
+	if (printmsg)
+		std::cout << "Deconstructor" << std::endl;   
 }
 
 Fixed &Fixed::operator= (const Fixed &newfixed)
