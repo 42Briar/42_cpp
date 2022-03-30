@@ -1,14 +1,14 @@
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include <iostream>
 #include <sstream>
+#include <iostream>
 
 int main()
 {
-	//Animal aniamls;
 	Animal *animals[10];
 	std::stringstream s;
+	//Animal afew;
 
 	for (int i = 0; i < 10; i++)
 	{
@@ -30,10 +30,10 @@ int main()
 	for (int i = 0; i < 10; i++)
 	{
 		std::cout << animals[i]->getbrain()->ideas[0] << std::endl;
-		delete animals[i];
 	}
 
-	//system("leaks execute01");
-
-
+	Dog lol;
+	{
+		Dog dsfg = lol;
+	}
 }

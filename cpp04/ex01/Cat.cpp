@@ -24,6 +24,7 @@ Cat & Cat::operator=(const Cat &copy)
 {
 	std::cout << "ASSIGNEMENT OPERATOR OVERLOAD: Cat copied through assignment operator overload" << std::endl;
 	this->type = copy.type;
+	this->brain = new Brain(*(copy.brain));
 
 	return *this;
 }

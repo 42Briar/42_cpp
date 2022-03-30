@@ -30,3 +30,8 @@ void Animal::MakeSound(void) const
 {
 	std::cout << "* generic animal noises *" << std::endl;
 }
+
+Brain *Animal::getbrain(void) const
+{
+	return 0;
+}

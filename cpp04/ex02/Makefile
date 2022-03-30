@@ -14,7 +14,7 @@ $(OBJDIR)/%.o: %.cpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
-	$(CC) $(FLAGS) -o $@ $^ 
+	$(CC) -g $(FLAGS) -o $@ $^ 
 
 clean:
 	@rm -f $(NAME) $(wildcard *.o)
