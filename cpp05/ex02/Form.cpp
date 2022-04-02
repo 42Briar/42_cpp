@@ -19,22 +19,22 @@ Form &Form::operator=(const Form &copy)
 	return *this;
 }
 
-bool Form::getIsSigned(void) 
+bool Form::getIsSigned(void) const
 {
     return issigned;
 }
 
-std::string Form::getName(void) 
+std::string Form::getName(void) const
 {
     return name;
 }
 
-int Form::getSignGrade(void) 
+int Form::getSignGrade(void) const
 {
     return signgrade;
 }
 
-int Form::getExecGrade(void) 
+int Form::getExecGrade(void) const
 {
     return execgrade;
 }

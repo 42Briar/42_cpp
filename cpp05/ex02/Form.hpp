@@ -20,6 +20,7 @@ public:
 	int getExecGrade(void);
 
 	void beSigned(const Bureaucrat &lol);
+	virtual void execute(const Bureaucrat &lol) const = 0;
 
 	class GradeTooLowException : public std::exception
 	{

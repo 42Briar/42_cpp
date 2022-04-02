@@ -14,10 +14,10 @@ public:
 
 	Form &operator= (const Form &copy);
 
-	bool getIsSigned(void);
-	std::string getName(void);
-	int getSignGrade(void);
-	int getExecGrade(void);
+	bool getIsSigned(void) const;
+	std::string getName(void) const;
+	int getSignGrade(void) const;
+	int getExecGrade(void) const;
 
 	void beSigned(const Bureaucrat &lol);
 
