@@ -9,22 +9,8 @@ int main()
 	Bureaucrat t2("betterbob", 5);
 
 	std::cout << lol;
-	try
-	{
-		lol.beSigned(t1);
-	}
-	catch (Bureaucrat::GradeTooLowException &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	try
-	{
-		lol.beSigned(t2);
-	}
-	catch (Bureaucrat::GradeTooLowException &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
+	t1.signForm(lol);
+	t2.signForm(lol);
 	std::cout << lol;
 
 }

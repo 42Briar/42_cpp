@@ -54,10 +54,13 @@ void Bureaucrat::decGrade(void)
 
 void Bureaucrat::signForm(Form &lol) const
 {
-	if (lol.getIsSigned())
-		std::cout << this->name << " signed form " << lol.getName() << std::endl;
-	else
+	try {lol.beSigned(*this);}
+	catch (Bureaucrat::GradeTooLowException &e)
+	{
 		std::cout << this->name << " couldn't sign form " << lol.getName() << " due to being too low-grade" << std::endl;
+		return ;
+	}
+	std::cout << this->name << " signed form " << lol.getName() << std::endl;
 }
 
 

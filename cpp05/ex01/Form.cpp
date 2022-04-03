@@ -43,11 +43,9 @@ void Form::beSigned(const Bureaucrat &lol)
 {
 	if (lol.getGrade() > this->signgrade)
 	{
-		lol.signForm(*this);
 		throw Bureaucrat::GradeTooLowException();
 	}
 	issigned = true;
-	lol.signForm(*this);
 }
 
 
