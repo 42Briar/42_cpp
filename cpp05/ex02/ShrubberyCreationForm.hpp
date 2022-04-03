@@ -11,7 +11,7 @@ public:
     
     ShrubberyCreationForm &operator= (const ShrubberyCreationForm &copy);
 
-    void execute(const Bureaucrat &lol) const;
+    void localexecute();
 
 private:
     const std::string t_name;

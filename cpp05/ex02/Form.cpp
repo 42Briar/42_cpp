@@ -19,22 +19,22 @@ Form &Form::operator=(const Form &copy)
 	return *this;
 }
 
-bool Form::getIsSigned(void) const
+bool Form::getIsSigned(void) 
 {
     return issigned;
 }
 
-std::string Form::getName(void) const
+std::string Form::getName(void) 
 {
     return name;
 }
 
-int Form::getSignGrade(void) const
+int Form::getSignGrade(void) 
 {
     return signgrade;
 }
 
-int Form::getExecGrade(void) const
+int Form::getExecGrade(void) 
 {
     return execgrade;
 }
@@ -46,9 +46,19 @@ void Form::beSigned(const Bureaucrat &lol)
 		throw Bureaucrat::GradeTooLowException();
 	}
 	issigned = true;
-	lol.signForm(*this);
 }
 
+void Form::execute(const Bureaucrat &lol)
+{
+	if (!issigned)
+        throw Form::FormNotSignedException();
+    if (this->getExecGrade() <= lol.getGrade())
+    {
+        localexecute();
+		return;
+    }
+	throw Bureaucrat::GradeTooLowException();
+}
 
 std::ostream &operator<< (std::ostream &os, Form &copy)
 {
@@ -57,3 +67,4 @@ std::ostream &operator<< (std::ostream &os, Form &copy)
 		<< " to be signed or a grade of " << copy.getExecGrade() << " to be executed." << std::endl;
 	return os;
 }
+

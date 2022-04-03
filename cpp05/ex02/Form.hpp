@@ -14,25 +14,22 @@ public:
 
 	Form &operator= (const Form &copy);
 
-	bool getIsSigned(void) const;
-	std::string getName(void) const;
-	int getSignGrade(void) const;
-	int getExecGrade(void) const;
+	bool getIsSigned(void);
+	std::string getName(void);
+	int getExecGrade(void);
+	int getSignGrade(void);
 
 	void beSigned(const Bureaucrat &lol);
-	virtual void execute(const Bureaucrat &lol) const = 0;
+	void execute(const Bureaucrat &lol);
 
-	class GradeTooLowException : public std::exception
+	class FormNotSignedException : public std::exception
 	{
 		public:
-			virtual const char *what() const throw();
+			virtual const char* what() const throw();
 	};
 
-	class GradeTooHighException : public std::exception
-	{
-		public:
-			virtual const char *what() const throw();
-	};
+protected:
+	virtual void localexecute() = 0;
 
 private:
 	const std::string name;
