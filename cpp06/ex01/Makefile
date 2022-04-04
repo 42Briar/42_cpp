@@ -1,4 +1,4 @@
-NAME 	= execute02
+NAME 	= execute00
 CC 		= c++
 FLAGS 	= -Wall -Wextra -Werror -std=c++98
 SRC 	= $(shell find *.cpp)
@@ -19,8 +19,7 @@ $(NAME): $(OBJ)
 clean:
 	@rm -f $(NAME) $(wildcard *.o)
 	@rm -rf $(OBJDIR) 
-	@rm -rf *_shrubbery	
-	
+
 fclean: clean
 	@rm -f $(NAME)
 

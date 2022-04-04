@@ -1,4 +1,4 @@
-NAME 	= execute02
+NAME 	= execute03
 CC 		= c++
 FLAGS 	= -Wall -Wextra -Werror -std=c++98
 SRC 	= $(shell find *.cpp)
