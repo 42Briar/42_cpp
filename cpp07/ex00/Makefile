@@ -1,6 +1,6 @@
-NAME 	= execute01
+NAME 	= execute00
 CC 		= c++
-FLAGS 	= -Wall -Wextra -Werror -pedantic -std=c++98
+FLAGS 	= -Wall -Wextra -Werror -std=c++98
 SRC 	= $(shell find *.cpp)
 OBJDIR  = obj
 OBJ     = $(addprefix $(OBJDIR)/, ${SRC:.cpp=.o})
